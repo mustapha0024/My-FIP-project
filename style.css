@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0700005d;
+    margin: 0;
+}
+
+.calendar {
+    width: 350px;
+    background: rgba(128, 236, 4, 0.329);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.calendar-days, .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-days div {
+    font-weight: bold;
+    text-align: center;
+}
+
+.calendar-dates div {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: #e9ecef;
+}.calendar-dates div:hover {
+    background: #dee2e6;
+}.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.calendar-header button {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.calendar-header button:hover {
+  background: #000307;
+}
+.calendar-dates div:nth-child(7n),
+.calendar-dates div:nth-child(7n+1) {
+  background: #f8d7da;
+  color: #721c24;
+}
+.calendar-days, .calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-days {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.calendar-dates div {
+  background: #f4f4f4;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 4px;
+  min-height: 40px;
+}
+
+.calendar-dates div:hover {
+  background: #e0e0e0;
+  cursor: pointer;
+}
